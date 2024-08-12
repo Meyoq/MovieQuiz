@@ -10,14 +10,13 @@ import UIKit
 
 final class StatisticService: StatisticServiceProtocol {
   
-    
-    
     private let storage: UserDefaults = .standard
     
     private enum Keys: String {
         case correctTotal
         case bestGame
         case gamesCount
+        case totalAccuracy
     }
     
     var correctTotal: Int {
