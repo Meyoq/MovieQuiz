@@ -20,6 +20,7 @@ final class AlertPresenter: AlertPresenterProtocol {
         let action = UIAlertAction(title: alertModel.buttonText, style: .default) { [weak self] _ in
             guard self != nil else { return }
             alertModel.buttonAction()}
+        alert.view.accessibilityIdentifier = "Game results"
         alert.addAction(action)
         viewController?.present(alert, animated: true)
     }
